@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tên sách *" android:textStyle="bold"/>
+        <EditText android:id="@+id/etAddTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ví dụ: Đắc nhân tâm"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tác giả *" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <EditText android:id="@+id/etAddAuthor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ví dụ: Dale Carnegie"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thể loại" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <Spinner android:id="@+id/spCategory" android:layout_width="match_parent" android:layout_height="48dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tình trạng đọc" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <RadioGroup android:id="@+id/rgStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/rbUnread" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chưa đọc" android:checked="true"/>
+            <RadioButton android:id="@+id/rbReading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đang đọc"/>
+            <RadioButton android:id="@+id/rbRead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đã đọc"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đánh giá" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <RatingBar android:id="@+id/rbAddRating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="1.0"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ghi chú" android:textStyle="bold" android:layout_marginTop="12dp"/>
+        <EditText android:id="@+id/etAddNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nhập ghi chú (nhiều dòng)..." android:inputType="textMultiLine" android:minLines="3"/>
+
+        <Button android:id="@+id/btnSaveBook" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lưu sách" android:backgroundTint="#D81B60" android:textColor="#FFF" android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>
